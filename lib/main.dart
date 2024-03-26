@@ -92,9 +92,46 @@ class HomeScreen extends StatelessWidget{
                      Expanded(
                         child:
                             Container(
+                              padding: const EdgeInsets.only(left:30,right:30),
                               decoration:BoxDecoration(
                                  color:Theme.of(context).colorScheme.primary,
-                              )
+                              ),
+                              child:
+                              Column(
+                              children:[
+                                 Row(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children:[
+                                       Text(
+                                          'My Groups',
+                                          style:TextStyle(
+                                             color: Theme.of(context).colorScheme.secondary,
+                                             fontSize: 30,
+                                             fontWeight: FontWeight.w600,
+                                          )
+
+                                       ),
+                                       Text(
+                                          'View all',
+                                          style:TextStyle(
+                                             color: Theme.of(context).colorScheme.secondary,
+                                             fontSize: 18,
+                                             fontWeight:FontWeight.w500
+                                          )
+                                       )
+                                    ]
+                                 ),
+                                  const Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children:[
+                                       Text('My Groups'),
+                                       Text('View all..')
+                                    ]
+                                 )                                
+                              ]
+                           )
+
                         )
                      ),
                      Expanded(
