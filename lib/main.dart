@@ -30,16 +30,101 @@ class HomeScreen extends StatelessWidget{
 
    @override
    Widget build(BuildContext context){
-      return Scaffold(
-         appBar:AppBar(
-            backgroundColor: Theme.of(context).colorScheme.primary,
-            title:Text(
-               'Home',
-               style: TextStyle(
-                  color: Theme.of(context).colorScheme.secondary,
-               )
-            ),
-         )
-      );
+      return 
+         SafeArea(
+            child:
+               Scaffold(
+               appBar:AppBar(
+                  elevation:0,
+                  titleSpacing: 20,
+                  toolbarHeight: 80,
+                  backgroundColor: Theme.of(context).colorScheme.primary,
+                  title:
+                     Column(
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                     mainAxisAlignment: MainAxisAlignment.center,
+                     children: [
+                        Text(
+                           'Welcome!',
+                           style: TextStyle(
+                              color: Theme.of(context).colorScheme.secondary,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700
+                           )
+                        ),
+                        Text(
+                           'Ven',
+                           style: TextStyle(
+                              color: Theme.of(context).colorScheme.secondary,
+                              fontSize: 24,
+                               fontWeight: FontWeight.w600
+                          )
+                        )
+                     ]
+                  ),
+                  leading:
+                     Padding(
+                        padding:const EdgeInsets.only(left:10),
+                        child:
+                           CircleAvatar(
+                           backgroundColor:Colors.red.shade500,
+                           child: const Text(
+                              'VG',
+                              style: TextStyle(
+                              color:Colors.white
+                           ),
+                           )
+                        )
+                  ),
+                  actions:[
+                     IconButton(
+                        onPressed: (){},
+                        icon: Icon(
+                           Icons.sunny,
+                           color:Theme.of(context).colorScheme.secondary,
+                           size:30,
+                        ),
+                     ),
+                  ]
+               ),
+                  body:Column(
+                  children:[
+                     Expanded(
+                        child:
+                            Container(
+                              decoration:BoxDecoration(
+                                 color:Theme.of(context).colorScheme.primary,
+                              )
+                        )
+                     ),
+                     Expanded(
+                        child:
+                              Container(
+                              decoration: BoxDecoration(
+                                 color:Theme.of(context).colorScheme.primary,
+                              ),
+                              child:
+                                 Column(
+                              children:[
+                                 Expanded(
+                                    child:
+                                  Container(
+                                    decoration:BoxDecoration(
+                                       color:Theme.of(context).colorScheme.secondary,
+                                       borderRadius: const BorderRadius.only(
+                                             topLeft:Radius.circular(50.0),
+                                             topRight:Radius.circular(50.0)
+                                          ), 
+                                    )
+                                 )
+                              )
+                              ]
+                           )
+                        )
+                     )
+                  ]
+               ),
+            )
+         );
    }
 }
