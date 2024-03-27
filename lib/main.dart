@@ -110,18 +110,75 @@ class HomeScreen extends StatelessWidget{
                                              fontSize: 30,
                                              fontWeight: FontWeight.w600,
                                           )
-
                                        ),
-                                       Text(
+                                        Text(
                                           'View all',
                                           style:TextStyle(
                                              color: Theme.of(context).colorScheme.secondary,
-                                             fontSize: 18,
-                                             fontWeight:FontWeight.w500
+                                             fontSize: 20,
+                                             fontWeight: FontWeight.w600,
                                           )
-                                       )
+                                       )                                      
                                     ]
                                  ),
+                                 Expanded(
+                                    child:
+                                 SizedBox(
+                                    width: double.infinity,
+                                    child:GridView(
+                                       scrollDirection: Axis.horizontal,
+                                       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                                         maxCrossAxisExtent: 500,
+                                          childAspectRatio: 1/2,
+                                             crossAxisSpacing: 20,
+                                             mainAxisSpacing:20,
+                                       ),
+                                       children: [
+                                          Container(
+                                                decoration: BoxDecoration(
+                                                   color:Colors.red,
+                                                ),
+                                             height: 100,
+                                             width: 100,
+                                             child: const Text('1'),
+                                          ),
+                                          Container(
+                                                decoration: BoxDecoration(
+                                                   color:Colors.red,
+                                                ),
+                                             height: 100,
+                                             width: 100,
+                                             child: const Text('1'),
+                                          ),
+                                          Container(
+                                                decoration: BoxDecoration(
+                                                   color:Colors.red,
+                                                ),
+                                             height: 100,
+                                             width: 100,
+                                             child: const Text('1'),
+                                          ),
+                                          Container(
+                                                decoration: BoxDecoration(
+                                                   color:Colors.red,
+                                                ),
+                                             height: 100,
+                                             width: 100,
+                                             child: const Text('1'),
+                                          ),
+                                          Container(
+                                                decoration: BoxDecoration(
+                                                   color:Colors.red,
+                                                ),
+                                             height: 100,
+                                             width: 100,
+                                             child: const Text('1'),
+                                          )
+                                       ]
+                                 )
+                                 )
+                                 )
+,
                                   const Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children:[
