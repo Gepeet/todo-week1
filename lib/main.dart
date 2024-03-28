@@ -70,86 +70,390 @@ class HomeScreen extends StatelessWidget {
           ]),
       body: Column(children: [
         Container(
-          height: 300,
-          decoration: BoxDecoration(
-            color: Colors.yellow.shade400,
-          ),
-          child: 
-          Column(
-            children: [
-              Row(
-                children:[
-                  Text('My Groups'),
-                  Text('View All')
-                ]
-              ),
-              Expanded(
-                  child: SizedBox(
-                      width: double.infinity,
-                      child: GridView(
-                          scrollDirection: Axis.horizontal,
-                          gridDelegate:
-                              const SliverGridDelegateWithMaxCrossAxisExtent(
-                            maxCrossAxisExtent: 200,
-                            childAspectRatio: 1 / 1.3,
-                            crossAxisSpacing: 20,
-                            mainAxisSpacing: 20,
-                          ),
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(20)),
-                              height: 100,
-                              width: 100,
-                              child: const Text('1'),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(20)),
-                              height: 100,
-                              width: 100,
-                              child: const Text('1'),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(20)),
-                              height: 100,
-                              width: 100,
-                              child: const Text('1'),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(20)),
-                              height: 100,
-                              width: 100,
-                              child: const Text('1'),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(20)),
-                              height: 100,
-                              width: 100,
-                              child: const Text('1'),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(20)),
-                              height: 100,
-                              width: 100,
-                              child: const Text('1'),
-                            )
-                          ])
-                        )
-                      ),
-            ],
-          )
-        ),
+            height: 400,
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.primary,
+            ),
+            child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 20, right: 20, top: 5, bottom: 20),
+                child: Column(
+                  children: [
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('My Groups',
+                              style: TextStyle(
+                                  color:
+                                      Theme.of(context).colorScheme.secondary,
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w600)),
+                          Text('View All',
+                              style: TextStyle(
+                                  color:
+                                      Theme.of(context).colorScheme.secondary,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600))
+                        ]),
+                    const SizedBox(height: 20),
+                    Expanded(
+                        child: SizedBox(
+                            width: double.infinity,
+                            child: GridView(
+                                scrollDirection: Axis.horizontal,
+                                gridDelegate:
+                                    const SliverGridDelegateWithMaxCrossAxisExtent(
+                                  maxCrossAxisExtent: 150,
+                                  childAspectRatio: 1 / 1.2,
+                                  crossAxisSpacing: 20,
+                                  mainAxisSpacing: 20,
+                                ),
+                                children: [
+                                  Container(
+                                      decoration: BoxDecoration(
+                                          color: Colors.pink.shade200,
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                      height: 100,
+                                      width: 100,
+                                      child: Padding(
+                                          padding: const EdgeInsets.all(20),
+                                          child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Container(
+                                                        height: 40,
+                                                        width: 40,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors
+                                                              .grey.shade100,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(20),
+                                                        ),
+                                                        child: const Icon(
+                                                            size: 30,
+                                                            Icons.settings),
+                                                      ),
+                                                      Text('32',
+                                                          style: TextStyle(
+                                                            color: Theme.of(
+                                                                    context)
+                                                                .colorScheme
+                                                                .secondary,
+                                                            fontSize: 45,
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                          ))
+                                                    ]),
+                                                Text('Blog',
+                                                    style: TextStyle(
+                                                      color: Theme.of(context)
+                                                          .colorScheme
+                                                          .tertiary,
+                                                      fontSize: 24,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ]))),
+                                  Container(
+                                      decoration: BoxDecoration(
+                                          color: Colors.green.shade200,
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                      height: 100,
+                                      width: 100,
+                                      child: Padding(
+                                          padding: const EdgeInsets.all(20),
+                                          child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Container(
+                                                        height: 40,
+                                                        width: 40,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors
+                                                              .grey.shade100,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(20),
+                                                        ),
+                                                        child: const Icon(
+                                                            size: 30,
+                                                            Icons.settings),
+                                                      ),
+                                                      Text('32',
+                                                          style: TextStyle(
+                                                            color: Theme.of(
+                                                                    context)
+                                                                .colorScheme
+                                                                .secondary,
+                                                            fontSize: 45,
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                          ))
+                                                    ]),
+                                                Text('Blog',
+                                                    style: TextStyle(
+                                                      color: Theme.of(context)
+                                                          .colorScheme
+                                                          .tertiary,
+                                                      fontSize: 24,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ]))),
+                                  Container(
+                                      decoration: BoxDecoration(
+                                          color: Colors.yellow.shade200,
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                      height: 100,
+                                      width: 100,
+                                      child: Padding(
+                                          padding: const EdgeInsets.all(20),
+                                          child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Container(
+                                                        height: 40,
+                                                        width: 40,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors
+                                                              .grey.shade100,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(20),
+                                                        ),
+                                                        child: const Icon(
+                                                            size: 30,
+                                                            Icons.settings),
+                                                      ),
+                                                      Text('32',
+                                                          style: TextStyle(
+                                                            color: Theme.of(
+                                                                    context)
+                                                                .colorScheme
+                                                                .secondary,
+                                                            fontSize: 45,
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                          ))
+                                                    ]),
+                                                Text('Blog',
+                                                    style: TextStyle(
+                                                      color: Theme.of(context)
+                                                          .colorScheme
+                                                          .tertiary,
+                                                      fontSize: 24,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ]))),
+                                  Container(
+                                      decoration: BoxDecoration(
+                                          color: Colors.blue.shade200,
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                      height: 100,
+                                      width: 100,
+                                      child: Padding(
+                                          padding: const EdgeInsets.all(20),
+                                          child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Container(
+                                                        height: 40,
+                                                        width: 40,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors
+                                                              .grey.shade100,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(20),
+                                                        ),
+                                                        child: const Icon(
+                                                            size: 30,
+                                                            Icons.settings),
+                                                      ),
+                                                      Text('32',
+                                                          style: TextStyle(
+                                                            color: Theme.of(
+                                                                    context)
+                                                                .colorScheme
+                                                                .secondary,
+                                                            fontSize: 45,
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                          ))
+                                                    ]),
+                                                Text('Blog',
+                                                    style: TextStyle(
+                                                      color: Theme.of(context)
+                                                          .colorScheme
+                                                          .tertiary,
+                                                      fontSize: 24,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ]))),
+                                  Container(
+                                      decoration: BoxDecoration(
+                                          color: Colors.orange.shade200,
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                      height: 100,
+                                      width: 100,
+                                      child: Padding(
+                                          padding: const EdgeInsets.all(20),
+                                          child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Container(
+                                                        height: 40,
+                                                        width: 40,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors
+                                                              .grey.shade100,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(20),
+                                                        ),
+                                                        child: const Icon(
+                                                            size: 30,
+                                                            Icons.settings),
+                                                      ),
+                                                      Text('32',
+                                                          style: TextStyle(
+                                                            color: Theme.of(
+                                                                    context)
+                                                                .colorScheme
+                                                                .secondary,
+                                                            fontSize: 45,
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                          ))
+                                                    ]),
+                                                Text('Blog',
+                                                    style: TextStyle(
+                                                      color: Theme.of(context)
+                                                          .colorScheme
+                                                          .tertiary,
+                                                      fontSize: 24,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ]))),
+                                  Container(
+                                      decoration: BoxDecoration(
+                                          color: Colors.green.shade200,
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                      height: 100,
+                                      width: 100,
+                                      child: Padding(
+                                          padding: const EdgeInsets.all(20),
+                                          child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Container(
+                                                        height: 40,
+                                                        width: 40,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors
+                                                              .grey.shade100,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(20),
+                                                        ),
+                                                        child: const Icon(
+                                                            size: 30,
+                                                            Icons.settings),
+                                                      ),
+                                                      Text('32',
+                                                          style: TextStyle(
+                                                            color: Theme.of(
+                                                                    context)
+                                                                .colorScheme
+                                                                .secondary,
+                                                            fontSize: 45,
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                          ))
+                                                    ]),
+                                                Text('Blog',
+                                                    style: TextStyle(
+                                                      color: Theme.of(context)
+                                                          .colorScheme
+                                                          .tertiary,
+                                                      fontSize: 24,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ]))),
+                                ]))),
+                  ],
+                ))),
         Expanded(
             child: Container(
                 decoration: BoxDecoration(
