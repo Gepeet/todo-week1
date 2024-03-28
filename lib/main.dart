@@ -70,19 +70,43 @@ class HomeScreen extends StatelessWidget {
           ]),
       body: Column(children: [
         Container(
-          height: 300,
+          height: 400,
           decoration: BoxDecoration(
-            color: Colors.yellow.shade400,
+            color: Theme.of(context).colorScheme.primary,
           ),
           child: 
+                  Padding(
+                     padding:const EdgeInsets.only(
+                        left:20,
+                        right:20,
+                        top:5,
+                        bottom:20
+                     ),
+                     child:
           Column(
             children: [
               Row(
+               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children:[
-                  Text('My Groups'),
-                  Text('View All')
+                  Text(
+                                 'My Groups',
+                                 style: TextStyle(
+                                    color: Theme.of(context).colorScheme.secondary,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w600
+                                 )
+                              ),
+                  Text(
+                                 'View All',
+                                 style: TextStyle(
+                                    color: Theme.of(context).colorScheme.secondary,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600
+                                 )
+                              )
                 ]
               ),
+               const SizedBox(height:20),
               Expanded(
                   child: SizedBox(
                       width: double.infinity,
@@ -149,6 +173,8 @@ class HomeScreen extends StatelessWidget {
                       ),
             ],
           )
+                  )
+
         ),
         Expanded(
             child: Container(
