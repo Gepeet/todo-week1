@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_week1/pages/new_item_page.dart';
 import 'package:todo_week1/pages/item_page.dart';
+import 'package:todo_week1/pages/group_list_page.dart';
 
 class HomePage extends StatelessWidget{
    const HomePage({super.key});
@@ -67,12 +68,22 @@ class HomePage extends StatelessWidget{
                                       Theme.of(context).colorScheme.secondary,
                                   fontSize: 24,
                                   fontWeight: FontWeight.w600)),
-                          Text('View All',
-                              style: TextStyle(
+                          TextButton(
+                                    onPressed:(){
+                                       Navigator.of(context).push(
+                                         MaterialPageRoute(
+                                             builder: (context) => const GroupListPage()
+                                          ) 
+                                       );
+                                    },
+                                    child:Text(
+                                       'View All',
+                                    style: TextStyle(
                                   color:
                                       Theme.of(context).colorScheme.secondary,
                                   fontSize: 18,
-                                  fontWeight: FontWeight.w600))
+                                  fontWeight: FontWeight.w600)),
+                              )
                         ]),
                     const SizedBox(height: 20),
                     Expanded(
@@ -458,7 +469,7 @@ class HomePage extends StatelessWidget{
                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                        children:[
                                           Text(
-                                                'Today',
+                                                'All Task',
                                                 style:TextStyle(
                                                    fontSize:24,
                                                    fontWeight: FontWeight.w600,
@@ -493,7 +504,7 @@ class HomePage extends StatelessWidget{
                                      Column(
                                           children:[
                                              Text(
-                                                '9 Tasks',
+                                                '9 Total',
                                                 style: TextStyle(
                                                    color:Theme.of(context).colorScheme.onTertiaryContainer,
                                                    fontSize: 16,
