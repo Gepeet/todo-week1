@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_week1/pages/new_item_page.dart';
+import 'package:todo_week1/pages/item_page.dart';
 
 class HomePage extends StatelessWidget{
    const HomePage({super.key});
@@ -525,6 +526,13 @@ class HomePage extends StatelessWidget{
                               itemCount:20,
                               itemBuilder:(context, index){
                                  return ListTile(
+                                          onTap:(){
+                                             Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                   builder: (context) => const ItemPage(),
+                                                )
+                                             );
+                                          },
                                     leading: 
                                          Container(
                                              height:40,
