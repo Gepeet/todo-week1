@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_week1/pages/new_item_page.dart';
 
 class HomePage extends StatelessWidget{
    const HomePage({super.key});
@@ -476,7 +477,13 @@ class HomePage extends StatelessWidget{
                                                          iconSize:30,
                                                         color:Theme.of(context).colorScheme.secondary,
                                                          icon:const Icon(Icons.add),
-                                                         onPressed:(){}
+                                                         onPressed:(){
+                                                      Navigator.of(context).push(
+                                                         MaterialPageRoute(
+                                                            builder: (context) => const NewItemPage(),
+                                                         )
+                                                      );
+                                                   }
                                                       )
                                                    )
                                              )

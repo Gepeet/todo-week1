@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_week1/themes/theme_provider.dart';
-//import 'package:todo_week1/pages/home_page.dart';
-import 'package:todo_week1/pages/new_item_page.dart';
+import 'package:todo_week1/pages/home_page.dart';
+//import 'package:todo_week1/pages/new_item_page.dart';
 
 void main() {
   runApp(
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Todo App',
-      home: NewItemPage(),
+      home: const HomePage(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
