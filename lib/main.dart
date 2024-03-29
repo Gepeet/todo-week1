@@ -42,12 +42,12 @@ class HomeScreen extends StatelessWidget {
                 Text('Welcome!',
                     style: TextStyle(
                         color: Theme.of(context).colorScheme.secondary,
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w700)),
                 Text('Ven',
                     style: TextStyle(
-                        color: Theme.of(context).colorScheme.secondary,
-                        fontSize: 24,
+                        color: Theme.of(context).colorScheme.primaryContainer,
+                        fontSize: 18,
                         fontWeight: FontWeight.w600))
               ]),
           leading: Padding(
@@ -161,7 +161,7 @@ class HomeScreen extends StatelessWidget {
                                                       color: Theme.of(context)
                                                           .colorScheme
                                                           .tertiary,
-                                                      fontSize: 24,
+                                                      fontSize: 18,
                                                       fontWeight:
                                                           FontWeight.w700,
                                                     ))
@@ -218,7 +218,7 @@ class HomeScreen extends StatelessWidget {
                                                       color: Theme.of(context)
                                                           .colorScheme
                                                           .tertiary,
-                                                      fontSize: 24,
+                                                      fontSize: 18,
                                                       fontWeight:
                                                           FontWeight.w700,
                                                     ))
@@ -275,7 +275,7 @@ class HomeScreen extends StatelessWidget {
                                                       color: Theme.of(context)
                                                           .colorScheme
                                                           .tertiary,
-                                                      fontSize: 24,
+                                                      fontSize: 18,
                                                       fontWeight:
                                                           FontWeight.w700,
                                                     ))
@@ -332,7 +332,7 @@ class HomeScreen extends StatelessWidget {
                                                       color: Theme.of(context)
                                                           .colorScheme
                                                           .tertiary,
-                                                      fontSize: 24,
+                                                      fontSize: 18,
                                                       fontWeight:
                                                           FontWeight.w700,
                                                     ))
@@ -389,7 +389,7 @@ class HomeScreen extends StatelessWidget {
                                                       color: Theme.of(context)
                                                           .colorScheme
                                                           .tertiary,
-                                                      fontSize: 24,
+                                                      fontSize: 18,
                                                       fontWeight:
                                                           FontWeight.w700,
                                                     ))
@@ -446,7 +446,7 @@ class HomeScreen extends StatelessWidget {
                                                       color: Theme.of(context)
                                                           .colorScheme
                                                           .tertiary,
-                                                      fontSize: 24,
+                                                      fontSize: 18,
                                                       fontWeight:
                                                           FontWeight.w700,
                                                     ))
@@ -460,16 +460,129 @@ class HomeScreen extends StatelessWidget {
                   color: Theme.of(context).colorScheme.primary,
                 ),
                 child: Column(children: [
-                  Expanded(
-                      child: Container(
+                      Container(
                           decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.secondary,
                     borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(50.0),
-                        topRight: Radius.circular(50.0)),
-                  )))
+                        topLeft: Radius.circular(20.0),
+                        topRight: Radius.circular(20.0)),
+                  ),
+                              child: 
+                              Padding(
+                                 padding:EdgeInsets.all(20),
+                                 child:
+                              Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                 children:[
+                                    Row(
+                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                       children:[
+                                          Text(
+                                                'Today',
+                                                style:TextStyle(
+                                                   fontSize:24,
+                                                   fontWeight: FontWeight.w600,
+                                                   color: Theme.of(context).colorScheme.tertiary,
+                                                )
+                                             ),
+
+                                             Center(
+                                                child:
+                                                   Container(
+                                                      decoration: BoxDecoration(
+                                                         color:Theme.of(context).colorScheme.primary,
+                                                         borderRadius: BorderRadius.circular(10)
+                                                      ),
+                                                      child:
+                                                      IconButton(
+                                                         iconSize:30,
+                                                        color:Theme.of(context).colorScheme.secondary,
+                                                         icon:const Icon(Icons.add),
+                                                         onPressed:(){}
+                                                      )
+                                                   )
+                                             )
+                                       ]
+                                    ),
+                                     Column(
+                                          children:[
+                                             Text(
+                                                '9 Tasks',
+                                                style: TextStyle(
+                                                   color:Theme.of(context).colorScheme.onTertiaryContainer,
+                                                   fontSize: 16,
+                                                   fontWeight: FontWeight.w600,
+                                                )
+                                             ),
+
+                                          ]
+                                      )
+
+
+                                 ]
+
+                              )
+                              ),
+                              ),
+
+                        Expanded(
+                           child:
+                           Container(
+                              decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.secondary,
+               ),
+                              child:
+                            Padding(
+                              padding:const EdgeInsets.symmetric(horizontal:10),
+                              child:
+                              
+                            ListView.builder(
+                              itemCount:20,
+                              itemBuilder:(context, index){
+                                 return ListTile(
+                                    leading: 
+                                         Container(
+                                             height:40,
+                                             width:40,
+                                             decoration:BoxDecoration(
+                                                color:Colors.red.shade300,
+                                                borderRadius: BorderRadius.circular(10),
+                                             ),
+                                             child:
+                                           const Icon(Icons.map),
+                                       ),
+                                    title:Column(
+                                             crossAxisAlignment: CrossAxisAlignment.start,
+                                             children:[
+                                                Text(
+                                                   'Top',
+                                                   style:TextStyle(
+                                                      color: Theme.of(context).colorScheme.tertiary,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.w800,
+                                                   )
+                                                ),
+                                                Text(
+                                                   'below',
+                                                   style:TextStyle(
+                                                      fontSize: 16,
+                                                      color:Theme.of(context).colorScheme.onTertiaryContainer,
+                                                      fontWeight: FontWeight.w500,
+                                                   )
+                                                )
+                                             ]
+                                          )
+                                 );
+                              }
+                           )                          )                          )
+
+
+                        
+                        )
                 ])))
       ]),
     ));
   }
 }
+
