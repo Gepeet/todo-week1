@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_week1/pages/add_group_page.dart';
 
 class GroupListPage extends StatelessWidget{
    const GroupListPage({super.key});
@@ -34,13 +35,21 @@ class GroupListPage extends StatelessWidget{
                         IconButton(
                         color: Theme.of(context).colorScheme.secondary,
                   icon:const Icon(Icons.add),
-                  onPressed:(){}
+                  onPressed:(){
+                              Navigator.of(context).push(
+                                 MaterialPageRoute(
+                                    builder: (context) => const AddGroupPage()
+                                 )
+                              );
+                           }
                ),     
                   )
                   ),
                ],
             ),
-            body: Expanded(
+            body: Column(
+               children:[
+               Expanded(
                child:
                Padding(
                   padding:const EdgeInsets.symmetric(horizontal:20),
@@ -79,6 +88,9 @@ class GroupListPage extends StatelessWidget{
                      }
                   )
                ),
+
+            )
+               ]
 
             )
          )
