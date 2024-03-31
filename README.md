@@ -10,16 +10,6 @@
 ## This week's app
 - Todo application
 
-## Screen shots
-
-![Design color](lib/assets/screenshots/add%20group.png)
-![Design color](lib/assets/screenshots/create-new.png)
-![Design color](lib/assets/screenshots/display%20details.png)
-![Design color](lib/assets/screenshots/edit.png)
-![Design color](lib/assets/screenshots/group-list.png)
-![Design color](lib/assets/screenshots/home.png)
-
-
 ## Project Summary
 
 ### Completed Tasks
@@ -56,6 +46,15 @@
 - Add testing automation task
 
 ## APK File
+
+## Screen shots
+
+![Design color](lib/assets/screenshots/add%20group.png)
+![Design color](lib/assets/screenshots/create-new.png)
+![Design color](lib/assets/screenshots/display%20details.png)
+![Design color](lib/assets/screenshots/edit.png)
+![Design color](lib/assets/screenshots/group-list.png)
+![Design color](lib/assets/screenshots/home.png)
 
 ## Additional Images
 
